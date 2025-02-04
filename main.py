@@ -1,20 +1,40 @@
 import sys
+from nodos import Node
 from list import List
-class Node:
-    def _init_(self, value: int):
-        self.value: int = value
-        self.next: Node | None = None
 
+#el primer node es de la carpeta y el otro es de la clase
 def main():
-    numeros = List()
-    numeros.append(17)
-    numeros.append(13)
-    numeros.append(23)
+    edad = List()
+    edad.append(37)
+    edad.append(34)
+    edad.append(25)
+    edad.append(35)
+    edad.append(28)
+    print('Edades: ')
+    edad.show()
+    nombres = List()
+    nombres.append('Diego')
+    nombres.append('Jose')
+    nombres.append('Alegría')
+    nombres.append('Orós')
+    nombres.append('Jao')
+    print('Nombres: ')
+    nombres.show()
+    nota = List()
+    nota.append(93)
+    nota.append(75)
+    nota.append(87)
+    nota.append(99)
+    nota.append(65)
+    print('Notas: ')
+    nota.show()
+    estudiante = List()
+    estudiante.append({'nombre': 'Diego', 'carnet': 1635524})
+    estudiante.append({'nombre': 'Jose', 'carnet': 1635525})
+    estudiante.append({'nombre': 'Alegría', 'carnet': 1635526})
+    estudiante.append({'nombre': 'Orós', 'carnet': 1635527})
+    estudiante.append({'nombre': 'Jao', 'carnet': 1635528})
 
-    print("size", numeros.size)
-    print("head", numeros.head)
-    print("tail", numeros.tail)
-    print("Esta vacía", numeros.is_empty())
-    print("Elementos")
-    numeros.show()
+    print('Estudiantes: ')
+    estudiante.show()
 main()
