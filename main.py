@@ -1,40 +1,41 @@
 import sys
-from nodos import Node
-from list import List
-
-#el primer node es de la carpeta y el otro es de la clase
+from list import  List
 def main():
     edad = List()
-    edad.append(37)
-    edad.append(34)
-    edad.append(25)
-    edad.append(35)
-    edad.append(28)
+    edad.append(18)
+    edad.append(20)
+    edad.append(21)
+    edad.append(13)
+    edad.append(15)
     print('Edades: ')
     edad.show()
+
     nombres = List()
     nombres.append('Diego')
     nombres.append('Jose')
-    nombres.append('Alegría')
-    nombres.append('Orós')
+    nombres.append('Alegria')
+    nombres.append('Oros')
     nombres.append('Jao')
     print('Nombres: ')
     nombres.show()
+
     nota = List()
-    nota.append(93)
-    nota.append(75)
-    nota.append(87)
-    nota.append(99)
+    nota.append(98)
     nota.append(65)
+    nota.append(43)
+    nota.append(87)
+    nota.append(100)
     print('Notas: ')
     nota.show()
+
     estudiante = List()
-    estudiante.append({'nombre': 'Diego', 'carnet': 1635524})
-    estudiante.append({'nombre': 'Jose', 'carnet': 1635525})
-    estudiante.append({'nombre': 'Alegría', 'carnet': 1635526})
-    estudiante.append({'nombre': 'Orós', 'carnet': 1635527})
-    estudiante.append({'nombre': 'Jao', 'carnet': 1635528})
+    estudiante.append({'nombre': 'Diego', 'carnet': 1631524})
+    estudiante.append({'nombre': 'José', 'carnet': 1631525})
+    estudiante.append({'nombre': 'Alegría', 'carnet': 1631526})
+    estudiante.append({'nombre': 'Orós', 'carnet': 1631527})
+    estudiante.append({'nombre': 'Jao', 'carnet': 1631528})
 
     print('Estudiantes: ')
     estudiante.show()
+
 main()
