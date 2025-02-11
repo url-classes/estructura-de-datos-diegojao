@@ -1,5 +1,5 @@
 from nodos import Node
-class List:
+class List[T]:
     def __init__(self):
         self.head: Node | None = None
         self.tail: Node | None = None
@@ -22,6 +22,32 @@ class List:
             else:
                 print(aux.value)
             aux = aux.next
+
+    def remove(self):
+        if self.head is None and self.tail is None:
+            raise Exception ("La lista está vacía")
+        if self.head is self.tail:
+            aux = self.head
+            self.head = None
+            self.tail = None
+            return aux.value
+        prev: Node | None = None
+        aux: Node | None = self.head
+
+        while aux is not None:
+            prev = aux
+            aux = aux.next
+            if aux is self.tail:
+                break
+
+        self.tail = prev
+        self.tail.next = None
+        return aux.value
+    def shift(self):
+        aux = self.head
+        self.head = self.head.next
+        aux.next = None
+        self.size -= 1
 
     def is_empty(self):
         return self.head is None and self.tail is None
